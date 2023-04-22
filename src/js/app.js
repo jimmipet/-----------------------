@@ -1,19 +1,57 @@
-  async function getReponce(){
-	let response = await fetch('https://fakestoreapi.com/products');
-	let  data = await response.json();
-	let content = data;
+// начислить баланс кнопка
+//открыть 
+const openCredit = document.querySelector('.btn-credit');
+	openCredit.addEventListener('click',()=>{
+	document.querySelector('.format').style.display = 'block';
+});
+//закрыть
+const closeCredit = document.querySelector('.format-btn__back');
+	closeCredit.addEventListener('click',()=>{
+	document.querySelector('.format').style.display = 'none';
+});
 
-	let result=document.querySelector(".cards-box")
-	for(let key in content){
-		result.innerHTML+=`<div class="cards-box__item">
-		<img  src="${content[key].image}" alt="">
-		<div class="cards-box__about">
-			<h2 class="cards-box__name">${content[key].title}</h2>
-			<p class="cards-box__price"><span>${content[key].price}</span>&#36</p>
-		</div>
-	</div>`
+//начислить баланс
+ const add = document.querySelector('.format-btn__add');
+	add.addEventListener('click',()=>{
+		console.log("начислил")
+		let balance = document.querySelector('.balance-value');
+		let valueBalance = Number(balance.textContent);
+		let valueInput = Number (document.querySelector('.format-input').value);
+		let sum = valueBalance + valueInput;
+		balance.textContent = sum;
+});
+
+
+
+//кнопка все товары
+let intervalId;
+
+const goods = document.querySelector('.btn-dropdown')
+	goods.addEventListener('click',()=>{
+	const menu =  event.target.dataset.path;
+	console.log(menu)
+	const list = document.querySelector('.btn-list');
+	if(!document.querySelector(`[data-target=${menu}]`).classList.contains('open')){
+		document.querySelector(`[data-target=${menu}]`).classList.add('list-active');
+		intervalId = setTimeout(()=>{
+			document.querySelector(`[data-target=${menu}]`).classList.add('open')
+		},0);
 	}
-}
 
-getReponce();
+	if(document.querySelector(`[data-target=${menu}]`).classList.contains('open')){
+		clearTimeout(intervalId);
+		document.querySelector(`[data-target=${menu}]`).classList.remove('list-active');
+		intervalId = setTimeout(()=>{
+			document.querySelector(`[data-target=${menu}]`).classList.remove('open')
+		},0);
+	}
+});
 
+
+//кнопка все товары
+//стиль для этйо кнопки
+
+ const styleDropdown = document.querySelector('.btn-dropdown');
+	styleDropdown.addEventListener('click',()=>{
+		styleDropdown.classList.toggle('dropdown-active');	
+});

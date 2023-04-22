@@ -4,6 +4,14 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: Golos;
+  src: url("../fonts/Golos-Text_VF.ttf");
+}
+html {
+  font-family: "Golos";
+}
+
 body {
   display: flex;
 }
@@ -73,6 +81,7 @@ section {
 }
 .basket-box__text-description {
   display: flex;
+  font-size: 14px;
   justify-content: center;
   align-items: center;
   height: 70px;
@@ -83,7 +92,7 @@ section {
 }
 .basket-box__btn-reset {
   position: absolute;
-  top: 288px;
+  top: 293px;
   bottom: 0;
   width: 100%;
   border: none;
@@ -101,6 +110,12 @@ section {
 }
 
 .balance-value {
+  color: #00a7ff;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.dollar {
   color: #00a7ff;
   font-size: 25px;
   font-weight: bolder;
@@ -180,6 +195,120 @@ section {
   justify-content: space-around;
   height: 45px;
   align-items: center;
+}
+
+.format {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #000;
+  display: none;
+}
+
+.format-credit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 200px;
+  background: white;
+  transform: translate(-50%, -50%);
+  border-radius: 40px;
+}
+
+.format-btn {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+.format-btn__add {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background: #00a7ff;
+  border: none;
+  color: white;
+}
+.format-btn__back {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background: #00a7ff;
+  border: none;
+  color: white;
+}
+
+.format-text-title {
+  text-align: center;
+  color: #00a7ff;
+  font-size: 18px;
+}
+
+.format-input {
+  width: 50%;
+  height: 40px;
+  font-size: 30px;
+  border: 1px solid #00a7ff;
+  border-radius: 20px;
+  text-align: center;
+}
+.format-input:focus {
+  outline: none;
+}
+
+.nav-bar__buttons {
+  width: 165px;
+  height: 25px;
+  align-items: center;
+  border-radius: 5px;
+  font-family: "Golos";
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.nav-bar__buttons:hover {
+  background-color: lightgray;
+}
+
+.btn-list {
+  position: absolute;
+  top: 22%;
+  left: 86.2%;
+  display: none;
+  list-style-type: none;
+}
+
+.btn-item {
+  text-align: center;
+  font-size: 15px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  height: 25px;
+  width: 165px;
+  background-color: #fafafa;
+  transition: background-color 0.3s ease;
+}
+.btn-item:hover {
+  background-color: lightgray;
+}
+
+.list-active {
+  display: block;
+}
+
+.btn-dropdown {
+  position: relative;
+}
+
+.dropdown-active {
+  background-color: #fafafa;
 }
 
 img {

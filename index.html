@@ -15,7 +15,7 @@
 				<div class="basket-box__top-items">
 					<div class="basket-box__balance">
 						<p class="balance-text">Мой баланс +</p>
-						<span class="balance-value">156 &#36</span>
+						<span class="balance-value">156 </span> <span class="dollar">&#36</span>
 					</div>
 					<button class="basket-btn">Перевести &#36 </button>
 				</div>
@@ -49,15 +49,35 @@
 				</div>
 				
 				<div class="nav-bar__btn-box">
-					<button class="nav-bar__buttons"><i class="fa-solid fa-cart-shopping"></i>Добавить товар</button>
-					<button class="nav-bar__buttons"><i class="fa-solid fa-sack-dollar"></i>Начислить</button>
-					<button class="nav-bar__buttons btn-list"><i class="fa-solid fa-parachute-box"></i>Все товары</button>
+					<button class="nav-bar__buttons btn-add"><i class="fa-solid fa-cart-shopping"></i>Добавить товар</button>
+					<button class="nav-bar__buttons btn-credit"><i class="fa-solid fa-sack-dollar"></i>Начислить
+					</button>
+					<button data-path="one" class="nav-bar__buttons btn-dropdown "><i class="fa-solid fa-parachute-box"></i>Все товары</button>
+					<ul data-target="one" class="btn-list">
+						<li class="btn-item">Электроника</li>
+						<li class="btn-item">Ювелирные изделия</li>
+						<li class="btn-item">Мужская одежда</li>
+						<li class="btn-item">Женская одежда</li>
+					</ul>
 				</div>
 				
 			</div>
-			<div class=" cards-box"></div>
-			
+			<div class=" cards-box">
+			</div>	
+		</div>
+
+		<div class="format">
+			<div class="format-credit">
+				<p class="format-text-title">Введите сумму для начисления</p>
+				<input class="format-input" type="text">
+				<div class="format-btn">
+					<button class="format-btn__add">Начислить</button>
+					<button class="format-btn__back">Назад</button>
+				</div>
+
+			</div>
 		</div>
 		<script src="./src/js/app.js"></script>
+		<script src="./src/js/parse.js"></script>
 </body>
 </html>
