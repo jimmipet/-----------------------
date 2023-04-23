@@ -188,13 +188,35 @@ section {
 }
 .cards-box__item {
   height: auto;
-  border: 1px solid #000;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+}
+.cards-box__img {
+  margin-bottom: 20px;
+  width: 80%;
+  margin-left: 10%;
 }
 .cards-box__about {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   height: 45px;
   align-items: center;
+  color: grey;
+  font-weight: bold;
+}
+.cards-box__name {
+  word-wrap: break-word;
+}
+.cards-box__hr {
+  height: 1px;
+  border: none;
+  background-color: black;
+  margin: 18px 0;
+  padding: 0 15px;
 }
 
 .format {

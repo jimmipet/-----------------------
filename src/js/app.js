@@ -22,7 +22,6 @@ const closeCredit = document.querySelector('.format-btn__back');
 });
 
 
-
 //кнопка все товары
 let intervalId;
 
@@ -53,5 +52,9 @@ const goods = document.querySelector('.btn-dropdown')
 
  const styleDropdown = document.querySelector('.btn-dropdown');
 	styleDropdown.addEventListener('click',()=>{
-		styleDropdown.classList.toggle('dropdown-active');	
+		styleDropdown.classList.toggle('dropdown-active');
+		let elementsToShow = document.querySelectorAll('[id]');
+		elementsToShow.forEach((element)=>{
+			element.style.display = 'block';
+		});
 });

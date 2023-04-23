@@ -5,31 +5,20 @@ async function getReponce(){
 
 	let result=document.querySelector(".cards-box")
 	for(let key in content){
-		result.innerHTML+=`<div class="cards-box__item">
-		<img  src="${content[key].image}" alt="">
+		let category = content[key].category;
+		category = category.replace(/[' ]/g, '-');
+		let itemId = `${category}-${key}`;
+		result.innerHTML+=`<div id="${itemId}" class="cards-box__item">
+		<i class="fa-solid fa-pen-to-square"></i>
+		<img class="cards-box__img"  src="${content[key].image}" alt="">
+		<hr class="cards-box__hr">
 		<div class="cards-box__about">
 			<p class="cards-box__name">${content[key].title}</p>
 			<p class="cards-box__price"><span>${content[key].price}</span>&#36</p>
 		</div>
 	</div>`
+	
 	}
 }
 
 getReponce();
-
-async function getSd(){
-	fetch('https://fakestoreapi.com/products/categories')
-	.then(res => res.json())
-	.then(categories => {
-	  const promises = categories.map(category => {
-		return fetch(`https://fakestoreapi.com/products/category/${category}`)
-		  .then(res => res.json())
-		  .then(products => ({ category, products }));
-	  });
-	  return Promise.all(promises);
-	})
-	.then(data => console.log(data));
-  
-}
-
-getSd()

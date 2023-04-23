@@ -163,14 +163,33 @@ section
 	gap: 10px
 	&__item
 		height: auto
-		border: 1px solid #000
+		box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2)
+		// border: 1px solid #000
+		display: flex
+		justify-content: center
+		flex-direction: column
+		padding: 15px
 	&__img
-
+		margin-bottom: 20px
+		width: 80%
+		margin-left: 10%
 	&__about
 		display: flex
 		justify-content: space-around
+		align-items: center
 		height: 45px
 		align-items: center
+		color: grey
+		font-weight: bold
+	&__name
+		word-wrap: break-word
+		
+	&__hr
+		height: 1px
+		border: none
+		background-color: black
+		margin: 18px 0
+		padding: 0 15px
 
 //форма начисления днег
 .format
@@ -231,7 +250,7 @@ section
 	&:focus
 		outline: none
 
-//кнопка все товары( дропдаунменюшка)
+//кнопка все товары( дропдаун-менюшка)
 .nav-bar__buttons
 	width: 165px
 	height: 25px
@@ -244,6 +263,7 @@ section
 	&:hover
 		background-color: lightgray
 .btn-list
+	//надо будет переделать ибо при увелечении ширины экрана оно уезжает ибо
 	position: absolute
 	top: 22%
 	left: 86.2%
