@@ -13,7 +13,6 @@ const closeCredit = document.querySelector('.format-btn__back');
 //начислить баланс
  const add = document.querySelector('.format-btn__add');
 	add.addEventListener('click',()=>{
-		console.log("начислил")
 		let balance = document.querySelector('.balance-value');
 		let valueBalance = Number(balance.textContent);
 		let valueInput = Number (document.querySelector('.format-input').value);
@@ -28,7 +27,6 @@ let intervalId;
 const goods = document.querySelector('.btn-dropdown')
 	goods.addEventListener('click',()=>{
 	const menu =  event.target.dataset.path;
-	console.log(menu)
 	const list = document.querySelector('.btn-list');
 	if(!document.querySelector(`[data-target=${menu}]`).classList.contains('open')){
 		document.querySelector(`[data-target=${menu}]`).classList.add('list-active');

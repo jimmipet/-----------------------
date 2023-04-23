@@ -9,7 +9,7 @@ async function getReponce(){
 		category = category.replace(/[' ]/g, '-');
 		let itemId = `${category}-${key}`;
 		result.innerHTML+=`<div id="${itemId}" class="cards-box__item">
-		<i class="fa-solid fa-pen-to-square"></i>
+		<i class="fa-solid fa-pen-to-square cards-box__icons"></i>
 		<img class="cards-box__img"  src="${content[key].image}" alt="">
 		<hr class="cards-box__hr">
 		<div class="cards-box__about">
@@ -19,6 +19,13 @@ async function getReponce(){
 	</div>`
 	
 	}
+// нажатие на редактирование карточки
+	const elements = document.querySelectorAll(".cards-box__item i");
+    elements.forEach(function(element) {
+        element.addEventListener("click", function() {
+            console.log("Clicked!");
+        });
+    });
 }
 
 getReponce();
