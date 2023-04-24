@@ -21,6 +21,7 @@ section {
 }
 
 .section-left {
+  position: relative;
   width: 20%;
   height: 100vh;
   display: flex;
@@ -28,10 +29,10 @@ section {
 }
 
 .basket-box {
-  position: relative;
-  margin-top: 20px;
-  height: 60%;
-  width: 90%;
+  position: fixed;
+  top: 20px;
+  bottom: 40%;
+  width: 18%;
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -70,6 +71,7 @@ section {
   font-weight: bold;
 }
 .basket-box__btn-yes {
+  cursor: pointer;
   height: 60px;
   width: 92%;
   margin-left: 4%;
@@ -91,6 +93,7 @@ section {
   text-align: center;
 }
 .basket-box__btn-reset {
+  cursor: pointer;
   position: absolute;
   top: 293px;
   bottom: 0;
@@ -122,6 +125,7 @@ section {
 }
 
 .basket-btn {
+  cursor: pointer;
   width: 120px;
   height: 40px;
   margin-left: 4%;
@@ -218,6 +222,9 @@ section {
   margin: 18px 0;
   padding: 0 15px;
 }
+.cards-box__icons {
+  cursor: pointer;
+}
 
 .format {
   position: fixed;
@@ -286,6 +293,7 @@ section {
 }
 
 .nav-bar__buttons {
+  cursor: pointer;
   width: 165px;
   height: 25px;
   align-items: center;
@@ -308,6 +316,7 @@ section {
 }
 
 .btn-item {
+  cursor: pointer;
   text-align: center;
   font-size: 15px;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);

@@ -1,13 +1,13 @@
  export async function getReponce(){
-	let response = await fetch('https://fakestoreapi.com/products');
-	let  data = await response.json();
-	let content = data;
+	const response = await fetch('https://fakestoreapi.com/products');
+	const  data = await response.json();
+	const content = data;
 
-	let result=document.querySelector(".cards-box")
+	const result=document.querySelector(".cards-box")
 	for(let key in content){
 		let category = content[key].category;
 		category = category.replace(/[' ]/g, '-');
-		let itemId = `${category}-${key}`;
+		const itemId = `${category}-${key}`;
 		result.innerHTML+=`<div id="${itemId}" class="cards-box__item">
 		<i class="fa-solid fa-pen-to-square cards-box__icons"></i>
 		<img class="cards-box__img"  src="${content[key].image}" alt="">

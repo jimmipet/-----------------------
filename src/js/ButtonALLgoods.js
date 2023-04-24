@@ -3,7 +3,6 @@ export const goods = document.querySelector('.btn-dropdown')
 goods.addEventListener('click',()=>{
 let intervalId;
 const menu =  event.target.dataset.path;
-const list = document.querySelector('.btn-list');
 if(!document.querySelector(`[data-target=${menu}]`).classList.contains('open')){
 	document.querySelector(`[data-target=${menu}]`).classList.add('list-active');
 	intervalId = setTimeout(()=>{
@@ -27,7 +26,7 @@ if(document.querySelector(`[data-target=${menu}]`).classList.contains('open')){
 export const styleDropdown = document.querySelector('.btn-dropdown');
 styleDropdown.addEventListener('click',()=>{
 	styleDropdown.classList.toggle('dropdown-active');
-	let elementsToShow = document.querySelectorAll('[id]');
+	const elementsToShow = document.querySelectorAll('[id]');
 	elementsToShow.forEach((element)=>{
 		element.style.display = 'block';
 	});

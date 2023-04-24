@@ -13,9 +13,9 @@ export const openCredit = document.querySelector('.btn-credit');
 //начислить баланс
  export const add = document.querySelector('.format-btn__add');
 	add.addEventListener('click',()=>{
-		let balance = document.querySelector('.balance-value');
-		let valueBalance = Number(balance.textContent);
-		let valueInput = Number (document.querySelector('.format-input').value);
-		let sum = valueBalance + valueInput;
+		const balance = document.querySelector('.balance-value');
+		const valueBalance = Number(balance.textContent);
+		const valueInput = Number (document.querySelector('.format-input').value);
+		const sum = valueBalance + valueInput;
 		balance.textContent = sum;
 });
