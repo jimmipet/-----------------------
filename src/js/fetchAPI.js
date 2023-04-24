@@ -1,4 +1,4 @@
-async function getReponce(){
+ export async function getReponce(){
 	let response = await fetch('https://fakestoreapi.com/products');
 	let  data = await response.json();
 	let content = data;
@@ -19,13 +19,5 @@ async function getReponce(){
 	</div>`
 	
 	}
-// нажатие на редактирование карточки
-	const elements = document.querySelectorAll(".cards-box__item i");
-    elements.forEach(function(element) {
-        element.addEventListener("click", function() {
-            console.log("Clicked!");
-        });
-    });
 }
-
 getReponce();

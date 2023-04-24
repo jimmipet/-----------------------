@@ -1,7 +1,7 @@
-let hiddenElements=[];
+export let hiddenElements=[];
 //мужская одежда
-const menСlothing = document.querySelector('.mens-clothing');
-menСlothing.addEventListener('click', () => {
+export const menClothing = document.querySelector('.mens-clothing');
+menClothing.addEventListener('click', () => {
 	let elementsToHide = document.querySelectorAll('[id]');
 	hiddenElements.forEach(element=>{
 		element.style.display = 'block';
@@ -16,8 +16,8 @@ menСlothing.addEventListener('click', () => {
 });
 
 //ювелирка
-const jewelery = document.querySelector('.jewellery');
-jewelery.addEventListener('click', () => {
+export const jewelery = document.querySelector('.jewellery');
+	jewelery.addEventListener('click', () => {
 	let elementsToHide = document.querySelectorAll('[id]');
 	hiddenElements.forEach(element=>{
 		element.style.display = 'block';
@@ -32,7 +32,7 @@ jewelery.addEventListener('click', () => {
 });
 
 // электроника
-const electric = document.querySelector('.electronics');
+export const electric = document.querySelector('.electronics');
 electric.addEventListener('click', () => {
 	let elementsToHide = document.querySelectorAll('[id]');
 	hiddenElements.forEach(element=>{
@@ -48,7 +48,7 @@ electric.addEventListener('click', () => {
 });
 
 //женская одежда
-const womenClothing = document.querySelector('.womens-clothing');
+export const womenClothing = document.querySelector('.womens-clothing');
 womenClothing.addEventListener('click', () => {
 	let elementsToHide = document.querySelectorAll('[id]');
 	hiddenElements.forEach(element=>{
