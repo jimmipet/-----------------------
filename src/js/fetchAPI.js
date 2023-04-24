@@ -1,3 +1,5 @@
+import {editCards} from './EditCards.js'
+
  export async function getReponce(){
 	const response = await fetch('https://fakestoreapi.com/products');
 	const  data = await response.json();
@@ -19,5 +21,6 @@
 	</div>`
 	
 	}
+	editCards();
 }
 getReponce();

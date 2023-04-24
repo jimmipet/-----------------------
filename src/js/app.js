@@ -9,3 +9,6 @@ export {getReponce}
 
 import {menClothing,jewelery,electric, womenClothing} from './filter.js';
 export default {menClothing,jewelery,electric, womenClothing};
+
+import {editCards} from './EditCards.js'
+export {editCards}
