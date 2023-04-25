@@ -1,4 +1,4 @@
-import {resetFilters} from './resetFilters.js';
+import {resetFilters} from '../Filters/resetFilters.js';
 //кнопка все товары
 export const goods = document.querySelector('.btn-dropdown')
 goods.addEventListener('click',()=>{

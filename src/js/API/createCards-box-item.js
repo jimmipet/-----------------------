@@ -1,5 +1,5 @@
-import { getResponce } from "./fetchAPI.js";
-import {editCards} from './EditCards.js';
+import { getResponce } from "../API/fetchAPI.js";
+import {editCards} from '../Buttons/EditCards.js';
 export  async function createCardsItem(){
 	const content = await getResponce();
 	const result = document.querySelector(".cards-box")

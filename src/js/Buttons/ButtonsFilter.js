@@ -1,5 +1,5 @@
 
-import { filterCategory } from "./filter.js";
+import { filterCategory } from "../Filters/filter.js";
 //кнопка электроника
 export const electric = document.querySelector('.electronics');
 	electric.addEventListener('click', () => {

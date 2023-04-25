@@ -1,6 +1,6 @@
 
-import { editCards } from "./EditCards.js";
-import { getResponce } from "./fetchAPI.js";
+import { editCards } from "../Buttons/EditCards.js";
+import { getResponce } from "../API/fetchAPI.js";
 
 export  async function filterCategory(categoryItem){
 	const content = await getResponce();

@@ -1,5 +1,5 @@
 
-import { createCardsItem } from './createCards-box-item.js';
+import { createCardsItem } from '../API/createCards-box-item.js';
 
 export  async function resetFilters(){
 	const result = document.querySelectorAll(".cards-box");
