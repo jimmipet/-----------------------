@@ -307,10 +307,14 @@ section {
   background-color: lightgray;
 }
 
+.dropdown {
+  position: relative;
+}
+
 .btn-list {
   position: absolute;
-  top: 22%;
-  left: 86.2%;
+  top: 110%;
+  right: 0%;
   display: none;
   list-style-type: none;
 }
@@ -331,7 +335,9 @@ section {
 }
 
 .list-active {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .btn-dropdown {
