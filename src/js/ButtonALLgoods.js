@@ -15,7 +15,8 @@ if(document.querySelector(`[data-target=${menu}]`).classList.contains('open')){
 	clearTimeout(intervalId);
 	document.querySelector(`[data-target=${menu}]`).classList.remove('list-active');
 	intervalId = setTimeout(()=>{
-		document.querySelector(`[data-target=${menu}]`).classList.remove('open')
+		document.querySelector(`[data-target=${menu}]`).classList.remove('open')	
+		resetFilters();
 	},0);
 }
 });
@@ -26,5 +27,4 @@ if(document.querySelector(`[data-target=${menu}]`).classList.contains('open')){
 export const styleDropdown = document.querySelector('.btn-dropdown');
 styleDropdown.addEventListener('click',()=>{
 	styleDropdown.classList.toggle('dropdown-active');
-	resetFilters();
 });
