@@ -1,13 +1,12 @@
 
 import { editCards } from "../Buttons/EditCards.js";
 import { getResponce } from "../API/fetchAPI.js";
+import { clearResult } from "../function/ClearResult.js";
 
 export  async function filterCategory(categoryItem){
 	const content = await getResponce();
+	clearResult();
 	const result = document.querySelectorAll(".cards-box");
-	for (let i = 0; i < result.length; i++) {
-		result[i].innerHTML = '';
-	}
 	for (let key in content) {
 		let category = content[key].category;
 		category = category.replace(/[' ]/g, '-');
@@ -27,5 +26,6 @@ export  async function filterCategory(categoryItem){
 		editCards();
 	}
 }
+
 }
 
