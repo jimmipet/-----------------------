@@ -1,23 +1,22 @@
-import {filterItems} from './filter.js'
 
-export let hiddenElements=[];
-
-export const menClothing = document.querySelector('.mens-clothing');
-	menClothing.addEventListener('click', () => {
-		filterItems('men-s-clothing', hiddenElements);
-});
-
-export const jewelery = document.querySelector('.jewellery');
-	jewelery.addEventListener('click', () => {
-		filterItems('jewelery', hiddenElements);
-});
-
+import { filterCategory } from "./filter.js";
+//кнопка электроника
 export const electric = document.querySelector('.electronics');
 	electric.addEventListener('click', () => {
-		filterItems('electronics', hiddenElements);
-});
-
+		filterCategory('electronics');
+	});
+//кнопка ювилерки
+export const jewelery = document.querySelector('.jewellery');
+	jewelery.addEventListener('click', () => {
+		filterCategory('jewelery');
+	});
+//кнопка мужской одежды
+export const menClothing = document.querySelector('.mens-clothing');
+	menClothing.addEventListener('click', () => {
+		filterCategory('men-s-clothing');
+	});
+//кнопка женской одежды
 export const womenClothing = document.querySelector('.womens-clothing');
 	womenClothing.addEventListener('click', () => {
-		filterItems('women-s-clothing', hiddenElements);
+		filterCategory('women-s-clothing',);
 });

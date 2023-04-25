@@ -1,3 +1,4 @@
+import {resetFilters} from './resetFilters.js';
 //кнопка все товары
 export const goods = document.querySelector('.btn-dropdown')
 goods.addEventListener('click',()=>{
@@ -22,12 +23,8 @@ if(document.querySelector(`[data-target=${menu}]`).classList.contains('open')){
 
 //кнопка все товары
 //стиль для этйо кнопки
-
 export const styleDropdown = document.querySelector('.btn-dropdown');
 styleDropdown.addEventListener('click',()=>{
 	styleDropdown.classList.toggle('dropdown-active');
-	const elementsToShow = document.querySelectorAll('[id]');
-	elementsToShow.forEach((element)=>{
-		element.style.display = 'block';
-	});
+	resetFilters();
 });

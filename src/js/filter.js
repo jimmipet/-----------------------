@@ -1,17 +1,31 @@
 
+import { editCards } from "./EditCards.js";
+import { getResponce } from "./fetchAPI.js";
 
-export const filterItems = (category, hiddenElements)=>{
-	const elementsToHide = document.querySelectorAll('[id]');
-
-	hiddenElements.forEach(element => {
-		element.style.display ='block';	
-	});
-
-	for (let i=0; i<elementsToHide.length; i++) {
-		const element = elementsToHide[i];
-		if(!element.id.startsWith(`${category}-`)){
-			element.style.display = 'none';
-			hiddenElements.push(element);
-		}
+export  async function filterCategory(categoryItem){
+	const content = await getResponce();
+	const result = document.querySelectorAll(".cards-box");
+	for (let i = 0; i < result.length; i++) {
+		result[i].innerHTML = '';
 	}
-};
+	for (let key in content) {
+		let category = content[key].category;
+		category = category.replace(/[' ]/g, '-');
+		const itemId = `${category}-${key}`;
+		if(category == categoryItem){
+			for(let i=0; i< result.length; i++) {
+			result[i].innerHTML+=`<div id="${itemId}" class="cards-box__item">
+			<i class="fa-solid fa-pen-to-square cards-box__icons"></i>
+			<img class="cards-box__img"  src="${content[key].image}" alt="">
+			<hr class="cards-box__hr">
+			<div class="cards-box__about">
+				<p class="cards-box__name">${content[key].title}</p>
+				<p class="cards-box__price"><span>${content[key].price}</span>&#36</p>
+			</div>
+		</div>`
+		}
+		editCards();
+	}
+}
+}
+

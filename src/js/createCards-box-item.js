@@ -2,8 +2,7 @@ import { getResponce } from "./fetchAPI.js";
 import {editCards} from './EditCards.js';
 export  async function createCardsItem(){
 	const content = await getResponce();
-	console.log(content);
-	const result=document.querySelector(".cards-box")
+	const result = document.querySelector(".cards-box")
 	for(let key in content){
 		let category = content[key].category;
 		category = category.replace(/[' ]/g, '-');
@@ -20,5 +19,4 @@ export  async function createCardsItem(){
 	}
 	editCards();
 }
-
 createCardsItem();
