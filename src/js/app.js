@@ -1,18 +1,6 @@
-import {openCredit,closeCredit,add} from './Buttons/AddBalanceButton.js';
-export {openCredit,closeCredit,add};
-
-import {goods,styleDropdown} from './Buttons/ButtonALLgoods.js';
-export{goods,styleDropdown};
-
-
-import {editCards} from './Buttons/EditCards.js'
-export {editCards}
-
-import {createCardsItem} from './API/createCards-box-item.js'
-export {createCardsItem}
-
-import { filterCategory } from './Filters/filter.js';
-export { filterCategory};
-
-import { electric } from './Buttons/ButtonsFilter.js';
-export {electric};
+import { openCredit, closeCredit, add } from './buttons/AddBalanceButton.js';
+import { goods, styleDropdown } from './buttons/buttonALLgoods.js';
+import { editCards } from './buttons/editCards.js'
+import { createCardsItem } from './api/createCardsItem.js'
+import { filterCategory } from './filters/filter.js';
+import { electric } from './buttons/buttonsFilter.js';

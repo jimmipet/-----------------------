@@ -1,7 +1,7 @@
 
-import { createCardsItem } from '../API/createCards-box-item.js';
-import { clearResult } from '../function/ClearResult.js';
-export  async function resetFilters(){
+import { createCardsItem } from '../api/createCardsItem.js';
+import { clearResult } from '../markupHelpers/clearResult.js';
+export async function resetFilters() {
 	clearResult();
 	createCardsItem();
 }

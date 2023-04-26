@@ -1,12 +1,12 @@
-import { getResponce } from "../API/fetchAPI.js";
-export  async function addFullContent(){
+import { getResponce } from "../api/fetchAPI.js";
+export async function addFullContent() {
 	const content = await getResponce();
 	const result = document.querySelector(".cards-box")
-	for(let key in content){
+	for (let key in content) {
 		let category = content[key].category;
 		category = category.replace(/[' ]/g, '-');
 		const itemId = `${category}-${key}`;
-		result.innerHTML+=`<div id="${itemId}" class="cards-box__item">
+		result.innerHTML += `<div id="${itemId}" class="cards-box__item">
 		<i class="fa-solid fa-pen-to-square cards-box__icons"></i>
 		<img class="cards-box__img"  src="${content[key].image}" alt="">
 		<hr class="cards-box__hr">
