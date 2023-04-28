@@ -14,7 +14,6 @@ export async function addFullContent(content,categoryItem,result) {
 				<p class="cards-box__price"><span>${content[key].price}</span>&#36</p>
 			</div>
 		</div>`
-		editCards();
 		}
 		if (category == categoryItem) {
 				result.innerHTML += `<div id="${itemId}" class="cards-box__item">
