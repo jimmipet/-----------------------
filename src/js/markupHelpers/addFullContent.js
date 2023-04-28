@@ -1,4 +1,4 @@
-import { getResponse } from "../api/fetchAPI.js";
+// import { getResponse } from "../api/fetchAPI.js";
 import { editCards } from "../buttons/editCards.js";
 export async function addFullContent(content,categoryItem,result) {
 	for (let key in content) {

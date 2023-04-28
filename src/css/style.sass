@@ -298,6 +298,109 @@ body
 	background-color: #fafafa
 	
 
+.section-product
+	display: none
+	margin-top: 20px
+	width: 79%
+	height: 600px
+	box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2)
+	flex-direction: column
+
+.products-nav
+	position: relative
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: 150px
+	&__text-title
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		margin-left: 20px
+		height: 70px
+	&__text
+		color: #19b2e6
+		font-size: 20px
+	&__title
+		font-weight: bold
+		color: #4b46ff
+.hr-product
+	position: absolute
+	bottom: 30px
+	margin-left: 2%
+	border-style: solid
+	border-color: #ddd
+	width: 96%
+.product-item
+	position: relative
+	display: flex
+	justify-content: space-around
+	&__img
+		width: 30%
+		height: 430px
+	&__action
+		display: flex
+		justify-content: space-between
+		width: 65%
+		margin-right: 20px
+		padding-top: 10px
+	&__quantity
+		display: flex
+		align-items: center
+		margin-bottom: 20px
+	&__input
+		margin-left: 10px
+		width: 75px
+		height: 30px
+	&__btn-select
+		font-size: 16px
+		font-family: Golos
+		cursor: pointer
+		background-color: #fafafa
+		border: none
+		border-radius: 5px
+		box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2)
+		height: 50px
+		margin-bottom: 20px
+		transition: background-color 1s ease
+		&:hover
+			background-color: lightgray
+	&__btn-back
+		cursor: pointer
+		background-color: #fafafa
+		border: none
+		border-radius: 5px
+		box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2)
+		font-size: 16px
+		font-family: Golos
+		height: 50px
+		transition: background-color 1s ease
+		&:hover
+			background-color: lightgray
+	&__action-left
+		display: flex
+		flex-direction: column
+
+	&__action-ritgh
+		display: flex
+		flex-direction: column
+		align-items: center
+		color: #4b46ff
+		font-weight: bold
+		font-size: 25px
+.hr-product-item
+	position: absolute
+	top: 0
+	width: 65%
+	transform: rotate(180deg)
+	padding: 0
+	height: 0
+	border: none
+	border-top: 2px dashed #ddd
+
+.img-product
+	width: 100%
+	height: 100%
 img
 	width: 100%
 	height: 350px
