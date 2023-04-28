@@ -1,10 +1,8 @@
-
- export async function getResponce(){
+export async function getResponse(){
 	try {
 		const response = await fetch('https://fakestoreapi.com/products');
 		const  data = await response.json();
-		const content = data;
-		return content;
+		return data;
 	} catch (error) {
 		console.log(error)
 	}

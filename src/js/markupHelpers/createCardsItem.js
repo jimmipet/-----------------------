@@ -1,8 +1,8 @@
-
 import { editCards } from '../buttons/editCards.js';
-import { addFullContent } from './addFullContent.js';
+import { filterCategory } from '../filters/filter.js';
+
 export async function createCardsItem() {
-	addFullContent();
+	await filterCategory("all")
 	editCards();
 }
 createCardsItem();
