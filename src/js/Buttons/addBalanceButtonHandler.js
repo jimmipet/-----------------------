@@ -8,12 +8,12 @@ export function addBalanceButtonHandler() {
 	// Открыть форму начисления баланса
 	const credit = document.querySelector('.btn-credit');
 	credit.addEventListener('click', () => {
-	  format.style.display = 'block';
+		format.style.display = 'block';
 	});
   
 	// Закрыть форму начисления баланса
 	close.addEventListener('click', () => {
-	  format.style.display = 'none';
+		format.style.display = 'none';
 	});
   
 	// Начислить баланс
@@ -25,4 +25,5 @@ export function addBalanceButtonHandler() {
   
 	  format.style.display = 'none';
 	});
-  }
+}
+addBalanceButtonHandler();
