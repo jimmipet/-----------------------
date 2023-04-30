@@ -14,14 +14,17 @@ export function addBasketContent(arrayBasketInfo, countClick, basketContent){
     
   }
   else if ((countClick > 1) && (basketContent.includes(arrayBasketInfo[0].name))){
-	//работает только если в корзие один товар ( при добавлении другого работает не так как нужно)
-	// const newCount = document.querySelector('.item-about__count')
-	// newCount.textContent = parseInt(newCount.textContent)+parseInt(arrayBasketInfo[0].count)
-	// const newPrice = document.querySelector('.item-about__price').children[1];
-	// console.log(parseFloat(newPrice.textContent))
-	// newPrice.textContent = (parseFloat(arrayBasketInfo[0].price)*parseInt(newCount.textContent)).toFixed(2)+'$' 
+    const names = document.querySelectorAll('.item-about__name');
+      names.forEach(nameElement => {
+          if (nameElement.textContent === arrayBasketInfo[0].name) {
+              const itemAbout = nameElement.closest('.item-about');
+              const newCount = itemAbout.querySelector('.item-about__count');
+              newCount.textContent = parseInt(newCount.textContent) + parseInt(arrayBasketInfo[0].count);
+              const newPrice = itemAbout.querySelector('.item-about__price').children[1];
+              newPrice.textContent = (parseFloat(arrayBasketInfo[0].price)*parseInt(newCount.textContent)).toFixed(2) + '$';
+  }
+});
 }
-  
   if((countClick > 2)){
     basket.style.overflowY = "auto"
   }
