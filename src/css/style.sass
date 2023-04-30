@@ -46,11 +46,15 @@ body
 		font-size: 25px
 		text-align: center
 	&__list
-		height: 200px
-		overflow-y: auto
-	&__item
 		height: 100px
-		border: 1px solid #000
+		// overflow-y: auto
+	&__item
+		display: flex
+		justify-content: space-between
+		padding-bottom: 5px
+		padding-left: 5px
+		height: 100px
+		border-bottom: 1px solid #000
 	&__text-result
 		margin-bottom: 20px
 		margin-left: 12px
@@ -85,7 +89,19 @@ body
 		border: none
 		background: white
 
+.item-foto
+	width: 100px
+	height: 98px
 
+.item-about
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	&__name
+		color: #00a7ff
+.item-about-icon
+	cursor: pointer
+	margin-left: 10px
 .hr-bot
 	margin-bottom: 10px
 .balance-text

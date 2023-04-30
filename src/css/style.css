@@ -54,12 +54,15 @@ body {
   text-align: center;
 }
 .basket-box__list {
-  height: 200px;
-  overflow-y: auto;
+  height: 100px;
 }
 .basket-box__item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  padding-left: 5px;
   height: 100px;
-  border: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 .basket-box__text-result {
   margin-bottom: 20px;
@@ -96,6 +99,25 @@ body {
   height: 50px;
   border: none;
   background: white;
+}
+
+.item-foto {
+  width: 100px;
+  height: 98px;
+}
+
+.item-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.item-about__name {
+  color: #00a7ff;
+}
+
+.item-about-icon {
+  cursor: pointer;
+  margin-left: 10px;
 }
 
 .hr-bot {

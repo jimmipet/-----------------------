@@ -4,3 +4,4 @@ import { editCards } from './buttons/editCards.js'
 import { createCardsItem } from './markupHelpers/createCardsItem.js'
 import { filterCategory } from './filters/filter.js';
 import { electric } from './buttons/buttonsFilter.js';
+import { buttonSelectProduct } from './buttons/buttonSelectProduct.js';
