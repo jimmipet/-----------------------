@@ -2,9 +2,6 @@ import { createBasketContent } from "./createBasketContent.js"
 
 export function addBasketContent(arrayBasketInfo, countClick, basketContent){
   const basket = document.querySelector('.basket-box__list')
-  
-  // Если basketContent НЕ включает имя продукта и countClick > 0,
-  // то вызываем функцию createBasketContent
   if(!basketContent.includes(arrayBasketInfo[0].name) && countClick > 0){
     createBasketContent(arrayBasketInfo)
   }
