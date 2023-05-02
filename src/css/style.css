@@ -54,14 +54,15 @@ body {
   text-align: center;
 }
 .basket-box__list {
-  height: 100px;
+  min-height: 100px;
+  overflow-y: auto;
 }
 .basket-box__item {
   display: flex;
   justify-content: space-between;
   padding-bottom: 5px;
   padding-left: 5px;
-  height: 100px;
+  height: auto;
   border-bottom: 1px solid #000;
 }
 .basket-box__text-result {

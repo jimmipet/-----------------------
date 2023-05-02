@@ -8,7 +8,6 @@ export function addBasketContent(arrayBasketInfo, countClick, basketContent){
   
   if((countClick > 1) && (!basketContent.includes(arrayBasketInfo[0].name))){
     basket.style.height = "200px"
-    
   }
   else if ((countClick > 1) && (basketContent.includes(arrayBasketInfo[0].name))){
     const names = document.querySelectorAll('.item-about__name');
@@ -22,7 +21,4 @@ export function addBasketContent(arrayBasketInfo, countClick, basketContent){
   }
 });
 }
-  if((countClick > 2)){
-    basket.style.overflowY = "auto"
-  }
 }
