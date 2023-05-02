@@ -1,4 +1,6 @@
-export function createBasketContent(arrayBasketInfo){
+import { buttonBasketItem } from "../buttons/buttonBasketItem.js";
+
+export function createBasketContent(arrayBasketInfo,basketContent){
 const basket = document.querySelector('.basket-box__list')
 	basket.innerHTML+=`	<div class="basket-box__item">
 	<div class="item-about">
@@ -9,4 +11,5 @@ const basket = document.querySelector('.basket-box__list')
 		<img src="${arrayBasketInfo[0].img}" alt="" class="item-foto">
 	</div>
 	</div>`;
+	buttonBasketItem(basketContent)
 }
