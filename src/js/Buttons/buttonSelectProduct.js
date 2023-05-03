@@ -1,4 +1,5 @@
 import { addBasketContent } from "../markupHelpers/addBasketContent.js";
+import { buttonBasketItem } from "./buttonBasketItem.js";
 
 // кнопка выбора товара и добавление его в корзину 
 export function buttonSelectProduct(){
@@ -21,6 +22,7 @@ export function buttonSelectProduct(){
 			}
 			arrayBasketInfo.push(BasketInfo)
 			addBasketContent(arrayBasketInfo,countClick,basketContent)
+			buttonBasketItem(basketContent);
 			basketContent.push(arrayBasketInfo[0].name,arrayBasketInfo[0].count,arrayBasketInfo[0].price);
 			arrayBasketInfo.pop()
 		}

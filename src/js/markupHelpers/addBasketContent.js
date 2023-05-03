@@ -1,7 +1,9 @@
 import { createBasketContent } from "./createBasketContent.js"
+import { buttonBasketItem } from "../buttons/buttonBasketItem.js"
 
 export function addBasketContent(arrayBasketInfo, countClick, basketContent){
   const basket = document.querySelector('.basket-box__list')
+  console.log(typeof  basketContent)
   if(!basketContent.includes(arrayBasketInfo[0].name) && countClick > 0){
     //как то нужно обновлять basketContent после работы buttonBasketItem  иначе если он удалиться то данные о нем остануться и при повторном нажатии выбрать ничего не будет 
     createBasketContent(arrayBasketInfo)
