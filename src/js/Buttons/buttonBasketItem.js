@@ -7,13 +7,10 @@ export function buttonBasketItem(basketContent){
     basket.forEach(element => {
         element.addEventListener('click',(event) => {
             const item = event.target.parentNode.parentNode.parentNode;
-            console.log(item)
             list.removeChild(item);
-            console.log(typeof basketContent);
             for( const key of Object.keys(basketContent)){
                 delete basketContent[key];
             }
-            console.log(basketContent);
             flag = true;
             addBasketContent(flag ? basketContent : [...basketContent]);
         });
